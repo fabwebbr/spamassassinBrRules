@@ -5,25 +5,20 @@ Regras para o spamassassin em português do Brasil
 
 ``cd ~/``
 
-``git clone https://github.com/pmgBrasil/spamassassinBrRules.git``
+``git clone https://github.com/fabwebbr/spamassassinBrRules.git``
 
 ``cd spamassassinBrRules/``
 
-## 2 - Faça o backup do arquivo atual
-``cp /etc/mail/spamassassin/custom.cf /etc/mail/spamassassin/custom.cf-bkp-`date +%Y-%m-%d-%H%M`.old``
+## 2 - Dê as permissões para o executável
+``chmod +x run_*.sh``
 
-## 3 - Copie o novo arquivo para o custom.cf
-``cp spamassassin-custom.cf /etc/mail/spamassassin/custom.cf``
+## 3 - Para atualizar as regras no Proxmox execute:
+``bash run_pmg.sh``
 
-## 4 - Sincronize as configurações e reinicie os serviços do pmg
-``pmgconfig sync --restart 1``
-
-``systemctl restart pmg-smtp-filter pmgpolicy postfix``
-
-## 5 - Atualizar o arquivo de regras
+## 4 - Atualizar o arquivo de regras
 
 ``cd ~/spamassassinBrRule``
 
 ``git pull``
 
-Se houver atualizações, realize os passos 2,3 e 4 novamente
+Se houver atualizações, realize o passo 3 novamente

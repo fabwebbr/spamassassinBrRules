@@ -89,3 +89,11 @@ body	LOCAL_RULE35	/.*Você já possui uma pontuação decorrente|.*do vínculo d
 score	LOCAL_RULE35	10.0
 body	LOCAL_RULE36	/.*um problema com os dados de pagamento atuais*./
 score	LOCAL_RULE36	10.0
+body    LOCAL_RULE37    /.*Disponibilidade para entrevista pessoal.*|.*currículo para sua análise*./
+score   LOCAL_RULE37    10.0
+body    LOCAL_RULE38    /.*Verifique atividade suspeita na sua conta gov.br*./
+score   LOCAL_RULE38    10.0
+body	LOCAL_RULE39	/.*ENC: Retorno.*./
+score	LOCAL_RULE39	20.0
+body	LOCAL_RULE40	/.*Pedido parcialmente bloqueado|.*Seu pedido foi bloqueado pela fiscalização alfande*./
+score	LOCAL_RULE40	20.0
